@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWA</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/material-icons.css">
+  <link rel="stylesheet" href="./fonts/poppins.css">
+  <link rel="manifest" href="/manifest.json">
+  <!-- ios support for [theme_color, icons] -->
+  <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#58a0ff">
+  <meta name="theme-color" content="#58a0ff">
+</head>
+<body>
+  <header>
+    <div class="container top-head">
+      <div class="logo">
+        <a href="index.html"><h1><span>Food</span> Recipes</h1></a>
+      </div>
+      <div class="others">
+        <span class="material-icons open-nav" data-target="pages">menu</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container content">
+      <div class="recipes">
+        <div class="recipe">
+          <img src="./img/dish.png" alt="Dish Image">
+          <div class="info">
+            <h3>Noddles, khaled hayek recipes</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="recipe">
+          <img src="./img/dish.png" alt="Dish Image">
+          <div class="info">
+            <h3>Noddles</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="recipe">
+          <img src="./img/dish.png" alt="Dish Image">
+          <div class="info">
+            <h3>Noddles</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="add-new">
+          <span class="material-icons open-nav" data-target="add-form">add</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="side-nav pages">
+    <div class="holder">
+      <div class="title">
+        <div class="icon">
+          <span class="material-icons">article</span>
+        </div>
+        <div class="text">
+          <h3>Pages</h3>
+        </div>
+      </div>
+      <ul>
+        <li><a href="./pages/about.html">About</a></li>
+        <li><a href="./pages/contact.html">Contact</a></li>
+      </ul>
+      <div class="copyright">
+        <p><span class="material-icons">copyright</span> Khaled Hayek</p>
+      </div>
+    </div>
+  </div>
+  <div class="side-nav add-form">
+    <div class="holder">
+      <div class="title">
+        <div class="icon">
+          <span class="material-icons">restaurant_menu</span>
+        </div>
+        <div class="text">
+          <h3>New Recipe</h3>
+        </div>
+      </div>
+      <div class="add-new-recipe">
+        <form action="">
+          <div class="input">
+            <label for="title">Recipe Title</label>
+            <input type="text" id="title" placeholder="e.g Pizza">
+          </div>
+          <div class="input">
+            <label for="grad">Ingradients</label>
+            <input type="text" id="grad" placeholder="e.g garlic, mushrooms">
+          </div>
+          <div class="add-btn">
+            <button>Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./js/app.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+body
+  margin: 0
+  padding: 0
+  font-family: 'Poppins', sans-serif
+  background-color: #e8eaed
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+a
+  text-decoration: none
+ul
+  padding-left: 0
+  list-style: none
+.container
+  margin: 0 auto
+  padding: 0 15px
+@media (min-width: 768px)
+  .container
+    width: 750px
+@media (min-width: 992px)
+  .container
+    width: 950px
+@media (min-width: 1200px)
+  .container
+    width: 1150px
+header
+  background-color: #1a73e8
+  .top-head
+    height: 70px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .logo
+      h1
+        color: #fff
+        span
+          font-weight: 500
+    .others
+      span
+        color: #fff
+        font-size: 40px
+        cursor: pointer
+main
+  padding-top: 40px
+  .content
+    .recipes
+      padding: 40px
+      border: 1px solid #cbced0
+      background-color: #fff
+      border-radius: 6px
+      .recipe
+        padding: 10px 20px
+        background-color: #f2f3f4 
+        box-shadow: 0 5px 5px #ddd
+        border-radius: 6px
+        display: flex
+        justify-content: space-between
+        &:not(:last-child)
+          margin-bottom: 20px
+        img
+          margin-right: 20px
+          width: 120px
+        .info
+          flex: 1
+          h3
+          p
+      .add-new
+        width: 50px
+        height: 50px
+        margin: 20px auto 0
+        background-color: #607d8b
+        border-radius: 50%
+        color: #fff
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        span
+          font-size: 40px
+    .about
+      h2
+        margin-bottom: 10px
+      p
+        line-height: 1.6
+        margin-bottom: 10px
+        font-size: 16px
+        color: #666
+    .contact
+      h2
+        margin-bottom: 10px
+      .divider
+        height: 1px
+        background-color: #ddd
+        margin: 10px 0
+      ul
+        padding-left: 10px
+        li
+          list-style: circle
+.side-nav
+  position: fixed
+  top: 0
+  left: 100%
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  transition: left .3s ease
+  .holder
+    position: absolute
+    top: 0
+    width: 300px
+    height: 100%
+    background-color: #fff
+    .title
+      display: flex
+      height: 60px
+      align-items: center
+      justify-content: space-between
+      border-bottom: 1px solid #ddd
+      padding: 0 10px
+      .icon
+        margin-right: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+      .text
+        flex: 1
+    ul
+      li
+        a
+          display: block
+          padding: 20px 10px
+          font-size: 20px
+          color: #000
+          font-weight: 500
+          position: relative
+          z-index: 2
+          border-bottom: 1px solid #eee
+          &:hover
+            &::before
+              width: 100%
+              height: 100%
+          &::before
+            content: ""
+            position: absolute
+            height: 0
+            width: 0
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            background-color: #ddd
+            transition: width .2s ease-in-out, height .2s ease-in-out
+            z-index: -1
+    p
+      margin-top: 15px
+      line-height: 1.6
+      display: flex
+      grid-gap: 10px
+      align-items: center
+      justify-content: center
+      color: #777
+    .add-new-recipe
+      padding: 20px 10px
+      form
+        .input
+          margin-bottom: 15px
+          label
+            display: block
+            color: #666
+          input
+            padding: 15px 0 7px
+            width: 100%
+            border: none
+            border-bottom: 2px solid #555
+            &:focus
+              outline: none
+        .add-btn
+          button
+            width: 120px
+            margin: 0 auto
+            display: block
+            padding: 15px 0
+            cursor: pointer
+            background-color: #e91e63
+            border-radius: 6px
+            border: none
+            outline: none
+            color: #fff
+            font-size: 20px
+            font-weight: 500
+            transition: translate .2s ease-in
+            &:hover
+              transform: translateY(5px) 
+.pages
+  .holder
+    right: 0
+.add-form
+  left: -100%
+  .holder
+    left: 0
+.side-nav.show-nav
+  left: 0
+
+@media (max-width: 768px)
+  main
+    .content
+      .recipes
+        .recipe
+          flex-direction: column
+          img
+            margin: 0 auto 10px
+
