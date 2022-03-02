@@ -29,30 +29,9 @@
   <main>
     <div class="container content">
       <div class="recipes">
-        <div class="recipe">
-          <img src="./img/dish.png" alt="Dish Image">
-          <div class="info">
-            <h3>Noddles, khaled hayek recipes</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="recipe">
-          <img src="./img/dish.png" alt="Dish Image">
-          <div class="info">
-            <h3>Noddles</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="recipe">
-          <img src="./img/dish.png" alt="Dish Image">
-          <div class="info">
-            <h3>Noddles</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="add-new">
-          <span class="material-icons open-nav" data-target="add-form">add</span>
-        </div>
+      </div>
+      <div class="add-new">
+        <span class="material-icons open-nav" data-target="add-form">add</span>
       </div>
     </div>
   </main>
@@ -86,14 +65,14 @@
         </div>
       </div>
       <div class="add-new-recipe">
-        <form action="">
+        <form action="" id="add-form">
           <div class="input">
             <label for="title">Recipe Title</label>
             <input type="text" id="title" placeholder="e.g Pizza">
           </div>
           <div class="input">
             <label for="grad">Ingradients</label>
-            <input type="text" id="grad" placeholder="e.g garlic, mushrooms">
+            <input type="text" id="ingredients" placeholder="e.g garlic, mushrooms">
           </div>
           <div class="add-btn">
             <button>Add</button>
@@ -104,5 +83,6 @@
   </div>
   <script src="./js/app.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/bundle.js"></script>
 </body>
 </html>

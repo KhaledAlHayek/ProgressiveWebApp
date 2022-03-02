@@ -8,8 +8,8 @@
 //   });
 // }
 
-const staticCacheName = "site-static-v1";
-const dynamicCacheName = "site-dynamic-v1"; // while users are online, they got a chance to cache every page they visit, so that it will be available online
+const staticCacheName = "site-static-v14";
+const dynamicCacheName = "site-dynamic-v19"; // while users are online, they got a chance to cache every page they visit, so that it will be available online
 
 const assets = [
   "/",
@@ -43,19 +43,20 @@ self.addEventListener("activate", e => {
 });
 
 self.addEventListener("fetch", e => {
-  e.respondWith(
-    caches.match(e.request)
-    .then(cacheRes => {
-      return cacheRes || fetch(e.request).then(fetchRes => {
-        caches.open(dynamicCacheName).then(cache => {
-          cache.put(e.request.url, fetchRes.clone());
-          return fetchRes;
+  if(e.request.url.indexOf("firestore.googleapis.com") === -1){
+    e.respondWith(
+      caches.match(e.request).then(cacheRes => {
+        return cacheRes || fetch(e.request).then(fetchRes => {
+          caches.open(dynamicCacheName).then(cache => {
+            cache.put(e.request.url, fetchRes.clone());
+            return fetchRes;
+          });
         });
-      });
-    }).catch(() => {
-      if(e.request.url.indexOf(".html") > -1){
-        return caches.match("/pages/fallback.html");
-      }
-    })
-  );
+      }).catch(() => {
+        if(e.request.url.indexOf(".html") > -1){
+          return caches.match("./pages/fallback.html");
+        }
+      })
+    );
+  }
 });
