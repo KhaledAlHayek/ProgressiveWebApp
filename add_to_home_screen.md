@@ -1,4 +1,4 @@
-# criteria to let chrome prompt a screen to add your website to the home
+# criteria to let chrome prompt a screen to add your website to the home screen
 - make sure the user has interacted with the dowmain for at least **30 seconds**
 - include a web app manifest
   - has a property of `short_name` or `name`
