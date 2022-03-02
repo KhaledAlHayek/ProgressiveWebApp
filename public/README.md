@@ -21,6 +21,17 @@ inspect the page where your local server is running, and then move to:
 is that you need to run `npm install` to install all the dependencies required for this project to run
 since i used `gulp` to compile some **SASS** into **CSS**
 
+## the app is now on hosting
+[visit](https://khaled-food-recipes.web.app/index.html) website from here.
+
+## now make sure to turn your wifi off
+so that you can browse the page even if you are offline, thanks to service workers.
+
+## note that
+in my website i have met the google chrome criteria so that it prompt a screen telling the user to add
+this website to their home screen.
+see `add_to_home_screen.md` file to discover more about that.
+
 # Thank you very much
 and i hope this will help you 
 
